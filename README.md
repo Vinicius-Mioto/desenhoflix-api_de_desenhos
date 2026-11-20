@@ -42,26 +42,6 @@ Identidade visual escura com destaques em verde-lima e violeta; seção de abert
 
 Os retratos de destaque usam imagens disponibilizadas pela própria API. A descrição nos cards é composta dos campos **espécie** e **origem**, pois a API não oferece biografias narrativas.
 
-## Git e GitHub
-
-Para corrigir problemas de API após o redesign ter sido integrado à `main`:
-
-```bash
-git switch main
-git pull origin main
-git switch -c fix/carregamento-imagens
-```
-
-Depois dos testes:
-
-```bash
-git add .
-git commit -m "fix: melhora tentativas de API e carregamento de imagens"
-git push -u origin fix/carregamento-imagens
-```
-
-Abra um Pull Request para integrar a correção à `main`. Se o redesign ainda não foi integrado, você também pode registrar a correção na branch que está usando, sem abrir outra.
-
 ## Limitações de conexão
 
 O site depende da disponibilidade da API e das imagens hospedadas nela. As novas tentativas ajudam em falhas temporárias, mas não corrigem problemas persistentes no servidor, no provedor ou no navegador. A imagem local de reserva impede que um card fique visualmente quebrado.
