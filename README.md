@@ -8,7 +8,9 @@ Um catálogo visual de personagens de **Rick and Morty**, criado com HTML, CSS e
 - Exibe cards com imagem, nome, status, espécie e origem dos personagens.
 - Permite pesquisar personagens pelo nome.
 - Navega entre as páginas de resultados fornecidas pela API.
-- Trata carregamento, erros de conexão e buscas sem resultado.
+- Trata carregamento, erros de conexão e buscas sem resultado, com até 5 tentativas automáticas de API a cada clique.
+- Preserva a página e os cards quando uma consulta falha; mantém página e pesquisa na URL após atualização.
+- Carrega imagens em grupos de até 4, repetindo cada tentativa até 4 vezes antes de usar uma arte local de reserva.
 - Adapta a interface para dispositivos móveis.
 
 ## Como executar
@@ -23,7 +25,8 @@ Um catálogo visual de personagens de **Rick and Morty**, criado com HTML, CSS e
 ```text
 desenhoflix/
 ├── assets/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── personagem-indisponivel.svg
 ├── css/
 │   └── style.css
 ├── js/
@@ -38,6 +41,30 @@ desenhoflix/
 Identidade visual escura com destaques em verde-lima e violeta; seção de abertura com portal ilustrado em CSS e retratos carregados da API; cartões e busca mantidos como parte central do trabalho.
 
 Os retratos de destaque usam imagens disponibilizadas pela própria API. A descrição nos cards é composta dos campos **espécie** e **origem**, pois a API não oferece biografias narrativas.
+
+## Git e GitHub
+
+Para corrigir problemas de API após o redesign ter sido integrado à `main`:
+
+```bash
+git switch main
+git pull origin main
+git switch -c fix/carregamento-imagens
+```
+
+Depois dos testes:
+
+```bash
+git add .
+git commit -m "fix: melhora tentativas de API e carregamento de imagens"
+git push -u origin fix/carregamento-imagens
+```
+
+Abra um Pull Request para integrar a correção à `main`. Se o redesign ainda não foi integrado, você também pode registrar a correção na branch que está usando, sem abrir outra.
+
+## Limitações de conexão
+
+O site depende da disponibilidade da API e das imagens hospedadas nela. As novas tentativas ajudam em falhas temporárias, mas não corrigem problemas persistentes no servidor, no provedor ou no navegador. A imagem local de reserva impede que um card fique visualmente quebrado.
 
 ## API
 

@@ -744,6 +744,53 @@ img {
     font-size: 18px;
 }
 
+/* Aviso exibido somente quando uma consulta à API falha */
+
+.aviso-erro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 27px;
+    padding: 17px 20px;
+    border: 1px solid rgba(255, 157, 138, 0.35);
+    border-radius: 14px;
+    background-color: rgba(255, 157, 138, 0.07);
+}
+
+.aviso-erro[hidden] {
+    display: none;
+}
+
+.aviso-erro p {
+    margin: 0;
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.aviso-erro button {
+    flex-shrink: 0;
+    padding: 11px 15px;
+    border: 1px solid var(--coral);
+    border-radius: 9px;
+    background-color: transparent;
+    color: var(--texto);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.aviso-erro button:hover {
+    background-color: rgba(255, 157, 138, 0.14);
+}
+
+@media (max-width: 540px) {
+    .aviso-erro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* Cards de personagens gerados pelo JavaScript */
 
 .grade-personagens {
