@@ -150,23 +150,6 @@ img {
     font-style: normal;
 }
 
-.cabecalho__navegacao {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-}
-
-.cabecalho__navegacao-link {
-    color: #c7c9d0;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-.cabecalho__navegacao-link:hover {
-    color: var(--destaque);
-}
-
 .cabecalho__botao {
     display: inline-flex;
     min-height: 41px;
@@ -1003,10 +986,6 @@ img {
 }
 
 @media (max-width: 950px) {
-    .cabecalho__navegacao {
-        gap: 18px;
-    }
-
     .hero__conteudo {
         min-height: 540px;
         grid-template-columns: 1.1fr 0.7fr;
@@ -1045,10 +1024,6 @@ img {
 
     .cabecalho__conteudo {
         min-height: 72px;
-    }
-
-    .cabecalho__navegacao {
-        display: none;
     }
 
     .cabecalho__botao {
