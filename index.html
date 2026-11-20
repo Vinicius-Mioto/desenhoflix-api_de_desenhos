@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Explore personagens de Rick and Morty com informações da API pública."
+    >
+    <title>Portal do Multiverso | Rick and Morty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho__conteudo">
+            <a class="marca" href="index.html" aria-label="Portal do Multiverso - início">
+                <span class="marca__simbolo" aria-hidden="true">✳</span>
+                <span>Portal do Multiverso</span>
+            </a>
+
+            <a
+                class="cabecalho__link"
+                href="https://rickandmortyapi.com/documentation"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Sobre a API
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="apresentacao" aria-labelledby="titulo-principal">
+            <div class="container">
+                <p class="etiqueta">CATÁLOGO INTERDIMENSIONAL</p>
+                <h1 id="titulo-principal">
+                    Conheça os personagens do
+                    <span>multiverso.</span>
+                </h1>
+                <p class="apresentacao__descricao">
+                    Explore personagens de Rick and Morty, descubra suas origens
+                    e encontre versões de diferentes realidades.
+                </p>
+            </div>
+        </section>
+
+        <section class="personagens container" aria-labelledby="titulo-personagens">
+            <div class="personagens__cabecalho">
+                <div>
+                    <p class="etiqueta">EXPLORE O UNIVERSO</p>
+                    <h2 id="titulo-personagens">Galeria de personagens</h2>
+                </div>
+
+                <form class="busca" id="form-busca" role="search">
+                    <label class="visualmente-oculto" for="campo-busca">
+                        Buscar personagem por nome
+                    </label>
+                    <input
+                        id="campo-busca"
+                        name="nome"
+                        type="search"
+                        placeholder="Ex.: Rick, Morty, Summer..."
+                        autocomplete="off"
+                    >
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+
+            <p id="mensagem" class="mensagem" role="status" aria-live="polite">
+                Carregando personagens...
+            </p>
+
+            <div id="lista-personagens" class="grade-personagens"></div>
+
+            <nav class="paginacao" aria-label="Paginação dos personagens">
+                <button id="botao-anterior" type="button" disabled>
+                    Anterior
+                </button>
+                <span id="indicador-pagina">Página 1 de 1</span>
+                <button id="botao-proximo" type="button" disabled>
+                    Próxima
+                </button>
+            </nav>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>Projeto acadêmico desenvolvido com HTML, CSS, JavaScript e API pública.</p>
+        </div>
+    </footer>
+</body>
+</html>
