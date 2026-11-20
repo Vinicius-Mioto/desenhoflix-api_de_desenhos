@@ -1,37 +1,29 @@
-# Portal do Multiverso
+# DesenhoFlix
 
-Projeto acadêmico de consumo de API com **HTML, CSS e JavaScript puros**.
+Um catálogo visual de personagens de **Rick and Morty**, criado com HTML, CSS e JavaScript puros para uma atividade de integração com API pública.
 
-## Objetivo
+## O que o projeto faz
 
-Exibir cards de personagens de Rick and Morty com foto, nome, status, espécie e origem, consumindo os dados da API pública.
-
-## Funcionalidades
-
-- Listagem de personagens via `fetch()` e `async/await`.
-- Pesquisa por nome.
-- Paginação usando a resposta da API.
-- Indicadores de carregamento, erro e busca sem resultados.
-- Interface responsiva para computadores e celulares.
+- Consome dados da [Rick and Morty API](https://rickandmortyapi.com/documentation) usando `fetch()` e `async/await`.
+- Exibe cards com imagem, nome, status, espécie e origem dos personagens.
+- Permite pesquisar personagens pelo nome.
+- Navega entre as páginas de resultados fornecidas pela API.
+- Trata carregamento, erros de conexão e buscas sem resultado.
+- Adapta a interface para dispositivos móveis.
 
 ## Como executar
 
-1. Abra a pasta no Visual Studio Code.
-2. Use a extensão **Live Server** para abrir `index.html` ou execute `python -m http.server 5500` no terminal dentro da pasta.
-3. Acesse `http://localhost:5500` no navegador caso tenha usado Python.
-4. É necessário acesso à internet para carregar os dados da API.
+1. Abra a pasta do repositório no VS Code.
+2. Abra `index.html` com a extensão **Live Server** ou rode `python -m http.server 5500` na raiz do projeto.
+3. Se usar o Python, acesse `http://localhost:5500`.
+4. Mantenha uma conexão à internet para carregar as fontes e os personagens da API.
 
-## API
-
-- Documentação: https://rickandmortyapi.com/documentation
-- Recurso usado: https://rickandmortyapi.com/api/character
-
-A API não oferece uma descrição narrativa dos personagens. O campo de texto dos cards apresenta informações existentes na API (espécie,  origem e status).
-
-## Estrutura
+## Organização
 
 ```text
-desenhoflix-api_de_desenhos/
+desenhoflix/
+├── assets/
+│   └── favicon.svg
 ├── css/
 │   └── style.css
 ├── js/
@@ -41,6 +33,13 @@ desenhoflix-api_de_desenhos/
 └── README.md
 ```
 
-## Tecnologias
+## Design
 
-HTML5, CSS3 e JavaScript ES6+.
+Identidade visual escura com destaques em verde-lima e violeta; seção de abertura com portal ilustrado em CSS e retratos carregados da API; cartões e busca mantidos como parte central do trabalho.
+
+Os retratos de destaque usam imagens disponibilizadas pela própria API. A descrição nos cards é composta dos campos **espécie** e **origem**, pois a API não oferece biografias narrativas.
+
+## API
+
+- Documentação: https://rickandmortyapi.com/documentation
+- Endpoint: https://rickandmortyapi.com/api/character

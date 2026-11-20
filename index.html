@@ -5,89 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Explore personagens de Rick and Morty com informações da API pública."
+        content="DesenhoFlix: explore os personagens de Rick and Morty em um catálogo interdimensional."
     >
-    <title>Portal do Multiverso | Rick and Morty</title>
+    <meta name="theme-color" content="#090b11">
+
+    <title>DesenhoFlix | Explore outros universos</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="cabecalho">
         <div class="container cabecalho__conteudo">
-            <a class="marca" href="index.html" aria-label="Portal do Multiverso - início">
-                <span class="marca__simbolo" aria-hidden="true">✳</span>
-                <span>Portal do Multiverso</span>
+            <a class="marca" href="#inicio" aria-label="DesenhoFlix - página inicial">
+                <span class="marca__icone" aria-hidden="true">D<span>✳</span></span>
+                <span class="marca__nome">desenho<span>flix</span><i>.</i></span>
             </a>
 
-            <a
-                class="cabecalho__link"
-                href="https://rickandmortyapi.com/documentation"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Sobre a API
+            <nav class="cabecalho__navegacao" aria-label="Navegação principal">
+                <a class="cabecalho__navegacao-link" href="#inicio">Início</a>
+                <a class="cabecalho__navegacao-link" href="#personagens">Personagens</a>
+                <a class="cabecalho__navegacao-link" href="#sobre">Sobre</a>
+            </nav>
+
+            <a class="cabecalho__botao" href="#personagens">
+                Ver catálogo
+                <span aria-hidden="true">↗</span>
             </a>
         </div>
     </header>
 
     <main>
-        <section class="apresentacao" aria-labelledby="titulo-principal">
-            <div class="container">
-                <p class="etiqueta">CATÁLOGO INTERDIMENSIONAL</p>
-                <h1 id="titulo-principal">
-                    Conheça os personagens do
-                    <span>multiverso.</span>
-                </h1>
-                <p class="apresentacao__descricao">
-                    Explore personagens de Rick and Morty, descubra suas origens
-                    e encontre versões de diferentes realidades.
-                </p>
+        <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+            <div class="hero__brilho" aria-hidden="true"></div>
+
+            <div class="container hero__conteudo">
+                <div class="hero__texto">
+                    <div class="hero__etiqueta">
+                        <span class="hero__etiqueta-ponto" aria-hidden="true"></span>
+                        CATÁLOGO DE OUTRA DIMENSÃO
+                    </div>
+
+                    <h1 id="titulo-principal">
+                        Seu próximo universo favorito está
+                        <span>bem aqui<span class="hero__asterisco">✳</span></span>
+                    </h1>
+
+                    <p class="hero__descricao">
+                        Do gênio mais caótico ao personagem mais improvável.
+                        Mergulhe no multiverso de Rick and Morty e descubra
+                        quem vive do outro lado do portal.
+                    </p>
+
+                    <div class="hero__acoes">
+                        <a class="botao botao--principal" href="#personagens">
+                            Explorar personagens
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a
+                            class="botao botao--secundario"
+                            href="https://rickandmortyapi.com/documentation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Sobre a API
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__nota">
+                        <span class="hero__nota-simbolo" aria-hidden="true">✦</span>
+                        Uma viagem pela série, um personagem de cada vez.
+                    </div>
+                </div>
+
+                <div class="hero__arte" aria-hidden="true">
+                    <div class="portal">
+                        <div class="portal__anel portal__anel--externo"></div>
+                        <div class="portal__anel portal__anel--interno"></div>
+                        <div class="portal__centro"></div>
+                        <span class="portal__estrela portal__estrela--um">✦</span>
+                        <span class="portal__estrela portal__estrela--dois">✳</span>
+                        <span class="portal__estrela portal__estrela--tres">✧</span>
+                    </div>
+
+                    <div class="retrato retrato--rick">
+                        <img
+                            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                            alt=""
+                            width="300"
+                            height="300"
+                        >
+                        <span>RICK SANCHEZ</span>
+                    </div>
+
+                    <div class="retrato retrato--morty">
+                        <img
+                            src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+                            alt=""
+                            width="300"
+                            height="300"
+                        >
+                        <span>MORTY SMITH</span>
+                    </div>
+
+                    <div class="retrato retrato--summer">
+                        <img
+                            src="https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+                            alt=""
+                            width="300"
+                            height="300"
+                        >
+                        <span>SUMMER SMITH</span>
+                    </div>
+
+                    <div class="hero__selo">
+                        <span class="hero__selo-simbolo">∞</span>
+                        POSSIBILIDADES
+                        <strong>INFINITAS</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faixa" aria-hidden="true">
+                <div class="faixa__conteudo">
+                    <span>UMA SÉRIE, INFINITOS UNIVERSOS</span>
+                    <span class="faixa__estrela">✳</span>
+                    <span>PERSONAGENS DE OUTRA DIMENSÃO</span>
+                    <span class="faixa__estrela">✳</span>
+                    <span>UMA SÉRIE, INFINITOS UNIVERSOS</span>
+                    <span class="faixa__estrela">✳</span>
+                    <span>PERSONAGENS DE OUTRA DIMENSÃO</span>
+                </div>
             </div>
         </section>
 
-        <section class="personagens container" aria-labelledby="titulo-personagens">
-            <div class="personagens__cabecalho">
-                <div>
-                    <p class="etiqueta">EXPLORE O UNIVERSO</p>
-                    <h2 id="titulo-personagens">Galeria de personagens</h2>
+        <section class="catalogo" id="personagens" aria-labelledby="titulo-personagens">
+            <div class="container">
+                <div class="catalogo__introducao">
+                    <div>
+                        <p class="secao-etiqueta">
+                            <span aria-hidden="true">//</span> O ELENCO DO MULTIVERSO
+                        </p>
+                        <h2 id="titulo-personagens">
+                            Rostos conhecidos.
+                            <span>Realidades nem tanto.</span>
+                        </h2>
+                    </div>
+
+                    <p class="catalogo__introducao-texto">
+                        Heróis, vilões, alienígenas e versões alternativas.
+                        Explore as figuras que tornam cada dimensão única.
+                    </p>
                 </div>
 
-                <form class="busca" id="form-busca" role="search">
-                    <label class="visualmente-oculto" for="campo-busca">
-                        Buscar personagem por nome
-                    </label>
-                    <input
-                        id="campo-busca"
-                        name="nome"
-                        type="search"
-                        placeholder="Ex.: Rick, Morty, Summer..."
-                        autocomplete="off"
-                    >
-                    <button type="submit">Buscar</button>
-                </form>
+                <div class="catalogo__barra">
+                    <div class="catalogo__indicador">
+                        <span class="catalogo__indicador-icone" aria-hidden="true">✳</span>
+                        <div>
+                            <strong>Arquivo de personagens</strong>
+                            <p id="mensagem" role="status" aria-live="polite">
+                                Carregando personagens...
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="busca" id="form-busca" role="search">
+                        <label class="visualmente-oculto" for="campo-busca">
+                            Buscar personagens por nome
+                        </label>
+                        <span class="busca__icone" aria-hidden="true">⌕</span>
+                        <input
+                            id="campo-busca"
+                            name="nome"
+                            type="search"
+                            placeholder="Buscar por nome..."
+                            autocomplete="off"
+                        >
+                        <button type="submit">
+                            Buscar
+                            <span aria-hidden="true">↗</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="lista-personagens" class="grade-personagens"></div>
+
+                <nav class="paginacao" aria-label="Paginação dos personagens">
+                    <button id="botao-anterior" type="button" disabled>
+                        <span aria-hidden="true">←</span>
+                        Anterior
+                    </button>
+
+                    <span id="indicador-pagina">Página 1 de 1</span>
+
+                    <button id="botao-proximo" type="button" disabled>
+                        Próxima
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </nav>
             </div>
-
-            <p id="mensagem" class="mensagem" role="status" aria-live="polite">
-                Carregando personagens...
-            </p>
-
-            <div id="lista-personagens" class="grade-personagens"></div>
-
-            <nav class="paginacao" aria-label="Paginação dos personagens">
-                <button id="botao-anterior" type="button" disabled>
-                    Anterior
-                </button>
-                <span id="indicador-pagina">Página 1 de 1</span>
-                <button id="botao-proximo" type="button" disabled>
-                    Próxima
-                </button>
-            </nav>
         </section>
     </main>
 
-    <footer class="rodape">
-        <div class="container">
-            <p>Projeto acadêmico desenvolvido com HTML, CSS, JavaScript e API pública.</p>
+    <footer class="rodape" id="sobre">
+        <div class="container rodape__conteudo">
+            <div>
+                <a class="marca marca--rodape" href="#inicio" aria-label="DesenhoFlix - voltar ao início">
+                    <span class="marca__icone" aria-hidden="true">D<span>✳</span></span>
+                    <span class="marca__nome">desenho<span>flix</span><i>.</i></span>
+                </a>
+                <p>Um cantinho do multiverso feito com código e criatividade.</p>
+            </div>
+
+            <div class="rodape__informacoes">
+                <span>Projeto acadêmico • HTML, CSS e JavaScript</span>
+                <a
+                    href="https://rickandmortyapi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Dados: Rick and Morty API ↗
+                </a>
+            </div>
         </div>
     </footer>
 </body>
