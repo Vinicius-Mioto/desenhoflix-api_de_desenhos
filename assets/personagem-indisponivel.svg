@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-label="Imagem indisponível">
+    <defs>
+        <radialGradient id="fundo" cx="50%" cy="43%" r="76%">
+            <stop stop-color="#29344a"/>
+            <stop offset="1" stop-color="#151a27"/>
+        </radialGradient>
+    </defs>
+    <rect width="400" height="380" fill="url(#fundo)"/>
+    <circle cx="200" cy="163" r="84" fill="none" stroke="#a78bfa" stroke-opacity=".3" stroke-width="3" stroke-dasharray="7 9"/>
+    <circle cx="200" cy="163" r="61" fill="none" stroke="#cdf56e" stroke-opacity=".45" stroke-width="7"/>
+    <text x="200" y="193" text-anchor="middle" font-size="86" font-family="Arial,sans-serif" font-weight="700" fill="#cdf56e">?</text>
+    <text x="200" y="295" text-anchor="middle" font-size="17" font-family="Arial,sans-serif" font-weight="700" fill="#f7f7f2">IMAGEM INDISPONÍVEL</text>
+    <text x="200" y="319" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#a1a7b5">Personagem ainda no multiverso</text>
+</svg>
